@@ -1,0 +1,10 @@
+---
+title: Sora - KH1.5 Animations
+originalAuthor: Cagaroo
+description: Custom moveset for Sora including retargetted KH2 animations
+assets:
+# Animations
+  - name: chara\pc\p_ex01\anm\rt\bin\p_ex01_001.pam
+    method: copy
+    source:
+      - name: 3ds\chara_pc\371-p_ex01_001.pam
