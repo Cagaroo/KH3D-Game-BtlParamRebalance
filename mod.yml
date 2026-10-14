@@ -1,10 +1,52 @@
 ---
-title: Sora - KH1.5 Animations
+title: BtlParamRebalance
 originalAuthor: Cagaroo
-description: Custom moveset for Sora including retargetted KH2 animations
+description: >-
+    Game rebalancing
+preferences:
+  - title: Camera Perspective
+    key: camStyle
+    description: Choose between 3DS and PC perspectives.
+    type: options
+    options:
+      - "3DS"
+      - "PC"
+    value: "PC"
+
 assets:
-# Animations
-  - name: chara\pc\p_ex01\anm\rt\bin\p_ex01_001.pam
+## Camera
+  - name: game\bin\pcam000s.bin
+    multi:
+      - name: game\bin\pcam000r.bin
+    method: copy
+    condition:
+      key: camStyle
+      value: "PC"
+    source:
+      - name: remastered\game\pcam000-pc.bin
+  - name: game\bin\pcam000s.bin
+    multi:
+      - name: game\bin\pcam000r.bin
+    method: copy
+    condition:
+      key: camStyle
+      value: "3DS"
+    source:
+      - name: remastered\game\pcam000-3ds.bin
+## Player Techniques
+  - name: game\bin\techprmp.bin
     method: copy
     source:
-      - name: 3ds\chara_pc\371-p_ex01_001.pam
+      - name: 3ds\game\171-techprmp.bin
+
+## Enemy Stats
+  - name: game\bin\btlparam.bin
+    method: copy
+    source:
+      - name: 3ds\game\132-btlparam.bin
+      
+## Enemy Techniques
+  - name: game\bin\techprm.bin
+    method: copy
+    source:
+      - name: 3ds\game\206-techprm.bin
