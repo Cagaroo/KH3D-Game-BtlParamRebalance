@@ -11,7 +11,7 @@ preferences:
     options:
       - "3DS"
       - "PC"
-    value: "PC"
+    value: "PC" 
 
 assets:
 ## Camera
@@ -21,32 +21,37 @@ assets:
     method: copy
     condition:
       key: camStyle
-      value: "PC"
+      value: "3DS"
     source:
-      - name: remastered\game\pcam000-pc.bin
+      - name: remastered\game\pcam000-3ds.bin
   - name: game\bin\pcam000s.bin
     multi:
       - name: game\bin\pcam000r.bin
     method: copy
     condition:
       key: camStyle
-      value: "3DS"
+      value: "PC"
     source:
-      - name: remastered\game\pcam000-3ds.bin
+      - name: remastered\game\pcam000-pc.bin
+      
 ## Player Techniques
   - name: game\bin\techprmp.bin
     method: copy
     source:
-      - name: 3ds\game\171-techprmp.bin
-
-## Enemy Stats
-  - name: game\bin\btlparam.bin
-    method: copy
-    source:
-      - name: 3ds\game\132-btlparam.bin
+      - name: remastered\game\techprmp.bin
       
 ## Enemy Techniques
   - name: game\bin\techprm.bin
     method: copy
     source:
-      - name: 3ds\game\206-techprm.bin
+      - name: remastered\game\techprm.bin
+
+## Misc
+  - name: game\bin\pat_sora.bin
+    method: copy
+    source:
+      - name: 3ds\game\148-pat_sora.bin
+  - name: game\bin\pat_riku.bin
+    method: copy
+    source:
+      - name: 3ds\game\174-pat_riku.bin
