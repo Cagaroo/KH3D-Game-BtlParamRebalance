@@ -3,37 +3,7 @@ title: BtlParamRebalance
 originalAuthor: Cagaroo
 description: >-
     Game rebalancing
-preferences:
-  - title: Camera Perspective
-    key: camStyle
-    description: Choose between 3DS and PC perspectives.
-    type: options
-    options:
-      - "3DS"
-      - "PC"
-    value: "PC" 
-
 assets:
-## Camera
-  - name: game\bin\pcam000s.bin
-    multi:
-      - name: game\bin\pcam000r.bin
-    method: copy
-    condition:
-      key: camStyle
-      value: "3DS"
-    source:
-      - name: remastered\game\pcam000-3ds.bin
-  - name: game\bin\pcam000s.bin
-    multi:
-      - name: game\bin\pcam000r.bin
-    method: copy
-    condition:
-      key: camStyle
-      value: "PC"
-    source:
-      - name: remastered\game\pcam000-pc.bin
-      
 ## Player Techniques
   - name: game\bin\techprmp.bin
     method: copy
@@ -45,13 +15,3 @@ assets:
     method: copy
     source:
       - name: remastered\game\techprm.bin
-
-## Misc
-  - name: game\bin\pat_sora.bin
-    method: copy
-    source:
-      - name: 3ds\game\148-pat_sora.bin
-  - name: game\bin\pat_riku.bin
-    method: copy
-    source:
-      - name: 3ds\game\174-pat_riku.bin
